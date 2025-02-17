@@ -1,0 +1,13 @@
+services:
+  amuse-bouche:
+    image: nginx:alpine
+    networks:
+      - cuisine-reseau
+
+  plat-principal:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: docker-chef_plat-principal
+    networks:
+      - cuisine-reseau

@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  entree:
+    image: nginx:amuse-bouche
+    ports:
+      - "80:80"
+    volumes:
+      - sauces:/sauces-maison
+
+  plat_principal:
+    build: .
+    environment:
+      - CUISSON=à_point
+    depends_on:
+      - entree
+
+volumes:
+  sauces:

@@ -1,0 +1,14 @@
+# Épluchures à jeter 🗑️
+.git
+node_modules
+.DS_Store
+
+# Restes de préparation 🥓
+*.log
+*.tmp
+*.swp
+
+# Ustensiles inutiles 🔪
+docker-compose.yml
+.env
+.secret

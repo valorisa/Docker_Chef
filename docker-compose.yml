@@ -1,0 +1,9 @@
+services:
+  four:
+    image: postgres:15
+    networks:
+      - cuisine-reseau
+
+networks:
+  cuisine-reseau:
+    driver: bridge
