@@ -18,9 +18,9 @@
 
 ### 🎨 Les Images : Les Recettes de Cuisine
 Base culinaire (Dockerfile)
+```bash
 FROM ubuntu:22.04 AS base_culinaire
-
-text
+```
 
 - **Couches empilées** = Étapes de préparation successives
 - **Cache** = Préparations pré-cuisinées réutilisables
@@ -28,9 +28,9 @@ text
 
 ### 🍽️ Les Conteneurs : Les Assiettes Servies
 Commander un plat (docker run)
+```bash
 docker run -it --name mon_plat chef_image:latest
-
-text
+```
 
 - **Isolation** = Présentation individuelle des plats
 - **Éphémère** = Nettoyage après repas
@@ -40,31 +40,33 @@ text
 
 ### 🥘 Structure de Base
 Menu gastronomique
+```bash
 FROM chef-michelin:3étoiles
 
 COPY préparations/ /cuisine
 RUN apt-get update && apt-get install -y épices-de-qualité
 
 CMD ["servir", "--presentation", "creative"]
-
-text
+```
 
 ### 🍜 Exemple Avancé (Multi-étapes)
 Phase 1 : Préparation des ingrédients
+```bash
 FROM node:18 as cuisson
 
 WORKDIR /cuisson
 COPY pâtes/ .
 RUN yarn install --prod
+```
 
 Phase 2 : Dressage final
+```bash
 FROM nginx:alpine
 
 COPY --from=cuisson /cuisson /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
-
-text
+```
 
 ## 🔪 Cuisine Pratique
 
@@ -74,15 +76,19 @@ text
 
 ### Préparation du menu
 Cloner la cuisine
+```bash
 git clone https://github.com/votrecompte/DockerChef.git
+```
 
 Construire l'image du chef
+```bash
 docker build -t mon_menu .
+```
 
 Servir le plat
+```bash
 docker run -p 8080:80 mon_menu
-
-text
+```
 
 ## 🏆 Best Practices de Chef
 
@@ -97,12 +103,13 @@ text
 
 Les recettes de la communauté sont les bienvenues !  
 📋 Process : 
+```bash
 1. Forkez le buffet
 2. Créez une nouvelle branche sauce (`git checkout -b sauce-secrete`)
 3. Commitez vos améliorations
 4. Poussez vers le serveur (`git push origin sauce-secrete`)
 5. Ouvrez un ticket service
-
+```
 ---
 
 🔧 *Maintenu avec amour par [Votre Nom] - [Licence MIT](LICENSE)*
