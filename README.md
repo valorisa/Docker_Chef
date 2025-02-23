@@ -112,4 +112,4 @@ Les recettes de la communauté sont les bienvenues !
 ```
 ---
 
-🔧 *Maintenu avec amour par valorisa - [Licence MIT](LICENSE)*
+🔧 *Maintenu par valorisa - [Licence MIT](LICENSE)*
